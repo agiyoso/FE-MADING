@@ -1,0 +1,80 @@
+.login{
+    height: 100dvh;
+    width: 100dwh;
+    overflow: hidden;
+}
+
+.bg-text-login{
+    width: 100%;
+}
+
+.text-login-admin{
+    font-family: Raleway;
+    font-weight: bolder;
+    font-size: 3em;
+}
+
+
+.text-login-kaosan{
+    font-family: Raleway;
+    font-weight: bolder;
+    font-size: 2em;
+    
+    width: 6em;
+    height: 2em;
+    border: .1em solid #2c3333;
+}
+
+.form-login{
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    height: 20em;
+    width: 25em;
+    box-shadow: rgba(0,0,0, .2) 1px 1px 4px;
+}
+
+.label{
+    padding-left: 2em;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.input-text{
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0,0,0,.5) 0px 0px 1px;
+    width: 15em;
+}
+
+.but-login-admin{
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: #f7f7f7;
+    font-weight: 600;
+    height: 2.3em;
+    width: 6em;
+}
+
+.but-beranda{
+    border: none;
+    box-shadow: rgba(0,0,0,1) 0px 0px 1px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    font-weight: 600;
+    color: black;
+    height: 2.3em;
+    width: 6em;
+}
+
+.footer-login{
+    width: 100%;
+    background-color: #2c3333;
+}
+
+.text-footer-login{
+    color: white;
+    font-family: Raleway;
+    font-weight: 400;
+}

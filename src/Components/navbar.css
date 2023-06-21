@@ -1,0 +1,44 @@
+.navbar{
+    width: 100dvw;
+    background-color: #27374D; 
+    height: 3em;
+    overflow-x: hidden;
+}
+
+.bg-text-navbar-tengah{
+    height: 2em;
+    width: 15em;
+}
+
+.text-navbar{
+    height: 100%;
+    color: #f7f7f7;
+    font-family: Raleway;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+}
+
+.navbar-sub{
+    height: 100%;
+    width: 100%;
+}
+
+.text-navbar-sub{
+    height: 100%;
+    width: 5em;
+    color: #f7f7f7;
+    font-family: Raleway;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.text-navbar-sub:hover{
+    color: #f7f7f7;
+}
+
+.search-navbar{
+    border-radius: 5px;
+}

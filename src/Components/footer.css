@@ -1,0 +1,26 @@
+.footer{
+    background-color: #526D82;
+    height: 15em;
+}
+
+.text-footer{
+    font-family: Roboto;
+    color: #f7f7f7;
+}
+
+.but-login{
+    border: 1px solid #f7f7f7;
+    border-radius: 5px;
+    color: #f7f7f7;
+    background-color: transparent;
+    width: 8.5em;
+    height: 2.5em;
+}
+
+.but-login:hover{
+    border: none;
+    background-color: #f7f7f7;
+    color: #2C3333;
+    font-family: Roboto;
+    font-weight: 600;
+}

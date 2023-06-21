@@ -1,0 +1,44 @@
+
+.judul-admin-sub{
+    height: 3em;
+    width: 17em;
+    border-bottom: 1px solid #2c3333;
+}
+
+.form-input-mading{
+    width: 100%;
+    height: 50vh;
+}
+
+.bg-form-text{
+    width: 50em;
+    height: 3em;
+}
+
+.text-mading-input{
+    font-family: Roboto;
+    font-size: 1.2em;
+}
+
+.input-input-mading{
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 1px;
+    height: 1.8em;
+    width: 20em;
+}
+
+.input-isi-mading{
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 1px;
+    height: 8em;
+    width: 20em;
+    resize: none;
+}
+
+.but-input-admin{
+    font-weight: 600;
+    width: 10em;
+    height: 2.7em;
+}
