@@ -1,41 +1,56 @@
-import { useState } from "react";
-import "./inputmading.css";
 import axios from "axios";
-import MadingAdmin from "./MadingAdmin";
+import { useEffect, useState } from "react";
 import DataMading from "./DataMading";
 
-const InputMading = ({ setHalaman }) => {
+const EditMadingAdmin = ({ setHalaman, id }) => {
+  const [dataMading, setDataMading] = useState({});
   const [dataInput, setDataInput] = useState({
+    id_mading: "",
     judul_mading: "",
     isi_mading: "",
   });
 
+  useEffect(() => {
+    const getDataMading = async () => {
+      const response = await axios.get(`http://localhost:3069/mading/${id}`);
+      setDataMading(response.data);
+    };
+    getDataMading();
+  }, []);
+
+  useEffect(() => {
+    setDataInput((data) => ({
+      ...data,
+      id_mading: id,
+      judul_mading: dataMading.judul_mading,
+      isi_mading: dataMading.isi_mading,
+    }));
+  }, [dataMading]);
+
   const handleInput = (e) => {
     e.preventDefault();
-
     setDataInput((data) => ({
       ...data,
       [e.target.id]: e.target.value,
     }));
   };
 
+  const handleSimpan = (e) => {
+    e.preventDefault();
+    axios.put(`http://localhost:3069/mading`, dataInput);
+    setHalaman(<DataMading setHalaman={setHalaman} />);
+  };
+
   const handleBatal = (e) => {
     e.preventDefault();
     setHalaman(<DataMading setHalaman={setHalaman} />);
-    // window.location.reload()
   };
 
-  const handleSimpan = (e) => {
-    e.preventDefault();
-    axios.post(`http://localhost:3069/mading`, dataInput);
-    setHalaman(<DataMading setHalaman={setHalaman} />);
-  };
-  console.log(dataInput);
   return (
-    <div className="input-mading container">
+    <div className="edit-mading-admin">
       <div className="judul-admin-sub">
         <p className="text-judul-admin d-flex align-items-center justify-content-center">
-          Input Mading
+          Edit Mading
         </p>
       </div>
 
@@ -50,6 +65,7 @@ const InputMading = ({ setHalaman }) => {
               className="input-input-mading px-1"
               onChange={handleInput}
               id="judul_mading"
+              value={dataInput.judul_mading}
             />
           </div>
         </div>
@@ -64,6 +80,7 @@ const InputMading = ({ setHalaman }) => {
               className="input-isi-mading px-1"
               onChange={handleInput}
               id="isi_mading"
+              value={dataInput.isi_mading}
             />
           </div>
         </div>
@@ -83,7 +100,7 @@ const InputMading = ({ setHalaman }) => {
             className="but-input-admin btn btn-primary"
             onClick={handleSimpan}
           >
-            Input
+            Simpan Edit
           </button>
         </div>
       </div>
@@ -91,4 +108,4 @@ const InputMading = ({ setHalaman }) => {
   );
 };
 
-export default InputMading;
+export default EditMadingAdmin;
