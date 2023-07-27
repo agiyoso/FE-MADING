@@ -51,6 +51,7 @@ const MadingDetails = () => {
     axios.post(`http://localhost:3069/komentar`, inputKomentar);
     setInputKomentar((data) => ({
       ...data,
+      email_komen: "",
       nama_komen: "",
       isi_komen: "",
     }));
@@ -86,7 +87,7 @@ const MadingDetails = () => {
                     <div className="col-1 p-0">
                       <p>-</p>
                     </div>
-                    <div className="col-3 p-0">
+                    <div className="col-4 p-0">
                       <p className="text-nama-komentar d-flex justify-content-start">
                         {data.nama_komen} :
                       </p>
@@ -106,6 +107,13 @@ const MadingDetails = () => {
           <div className="bg-input-komentar d-flex justify-content-center">
             <div className="row" style={{ width: "100%" }}>
               <div className="col p-0">
+                <input
+                  type="text"
+                  id="email_komen"
+                  placeholder="Email..."
+                  className="input-username"
+                  onChange={handleInput}
+                />
                 <input
                   type="text"
                   id="nama_komen"

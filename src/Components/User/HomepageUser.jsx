@@ -19,11 +19,12 @@ const HomepageUser = () => {
         <div className="homepage-user" style={{overflowX:"hidden"}}>
             <div className="banner">
                 <div className="bg-foto-banner">
-                    <p className="text-banner d-flex align-items-center justify-content-center">SEKUL 420 PAGI</p>
+                    <p className="text-banner d-flex align-items-center justify-content-center">Sekolah Tinggi JeWePe</p>
                 </div>
             </div>
 
             <div className='body-homepage container'>
+                <section id='tentang'>
                 <hr />
                 <div className="bg-barang d-flex justify-content-center row">
                     <p className='text-judul-barang-body d-flex justify-content-center'>- Tentang -</p>
@@ -34,7 +35,10 @@ const HomepageUser = () => {
                         </p>
                     </div>
                 </div>
+                </section>
 
+         
+                <section id='mading'>
                 <hr />
                 <div className="bg-barang d-flex justify-content-center row">
                     <p className='text-judul-barang-body d-flex justify-content-center'>- Mading -</p>
@@ -53,7 +57,7 @@ const HomepageUser = () => {
                                                 to={`mading/${data.id_mading}`}
                                                 style={{textDecoration:"none", color:'black'}}    
                                             >
-                                                <p className='text-selengkapnya d-flex align-items-center justify-content-end' >Selengkapnya </p>
+                                                <p className='text-selengkapnya d-flex align-items-center justify-content-end px-2' >Selengkapnya</p>
                                             </Link>
                                         </td>
                                     </tr>
@@ -63,7 +67,7 @@ const HomepageUser = () => {
                         </table>
                     </div>
                 </div>
-
+                </section>
             </div>
         </div>
      );

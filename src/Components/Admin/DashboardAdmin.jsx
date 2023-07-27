@@ -16,7 +16,7 @@ const DashboardAdmin = () => {
 
     console.log(dataAdmin)
     return ( 
-        <div className="dashboard-admin container py-3">
+        <div className="dashboard-admin container py-3" style={{ maxWidth:"100dvw", overflowX:"hidden"}}>
             <div className="judul-admin">
                 <p className="text-judul-admin d-flex align-items-center justify-content-center">{dataAdmin.username}</p>
             </div>

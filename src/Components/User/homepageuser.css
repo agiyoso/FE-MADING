@@ -67,4 +67,14 @@
 
 .text-selengkapnya{
     height: 100%;
+    color: #3F4E4F;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: .2s ease;
+    border-radius: 5px;
+}
+
+.text-selengkapnya:hover{
+    background-color: #3F4E4F;
+    color: white;
 }

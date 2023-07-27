@@ -44,9 +44,9 @@ const Login = () => {
     <div className="login">
       <div className="bg-text-login py-5">
         <p className="text-login-admin">Login Admin</p>
-        <div className="bg-text-login-kaosan d-flex justify-content-center">
-          <p className="text-login-kaosan d-flex justify-content-center align-items-center">
-            SEKUL 420 PAGI
+        <div className="d-flex justify-content-center">
+          <p className="text-login-jewepe d-flex justify-content-center align-items-center">
+            Sekolah Tinggi JeWePe
           </p>
         </div>
       </div>
@@ -95,7 +95,7 @@ const Login = () => {
       </div>
 
       <div className="footer-login fixed-bottom ">
-        <p className="text-footer-login m-0">&copy; SEKUL 420 PAGI</p>
+        <p className="text-footer-login m-0">&copy; Sekolah Tinggi JeWePe</p>
       </div>
     </div>
   );

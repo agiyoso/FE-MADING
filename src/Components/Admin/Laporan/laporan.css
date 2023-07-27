@@ -1,0 +1,14 @@
+.laporan{
+    overflow-x: hidden;
+    max-width: 100dvw;
+}
+
+.bg-laporan{
+    background-color: red;
+    min-height: 70dvh;
+}
+
+.teks-judul-laporan{
+    font-weight: 600;
+    font-size: 1.3em;
+}

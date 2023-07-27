@@ -39,6 +39,11 @@
     color: #f7f7f7;
 }
 
+.link-section{
+    text-decoration: none;
+    color: white
+}
+
 .search-navbar{
     border-radius: 5px;
 }
