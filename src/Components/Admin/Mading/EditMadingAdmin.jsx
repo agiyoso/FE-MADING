@@ -8,6 +8,7 @@ const EditMadingAdmin = ({ setHalaman, id }) => {
     id_mading: "",
     judul_mading: "",
     isi_mading: "",
+    status_komentar: "",
   });
 
   useEffect(() => {
@@ -48,60 +49,103 @@ const EditMadingAdmin = ({ setHalaman, id }) => {
 
   return (
     <div className="edit-mading-admin">
-      <div className="judul-admin-sub">
-        <p className="text-judul-admin d-flex align-items-center justify-content-center">
-          Edit Mading
-        </p>
-      </div>
-
-      <div className="form-input-mading m-5 px-5">
-        <div className="row">
-          <div className="col-2 d-flex justify-content-start">
-            <p className="text-mading-input">Judul Mading</p>
+      <div className="row">
+        <div className="col">
+          <div className="judul-admin-sub">
+            <p className="text-judul-admin d-flex align-items-center justify-content-center">
+              Edit Mading
+            </p>
           </div>
-          <div className="col d-flex justify-content-start">
-            <input
-              type="text"
-              className="input-input-mading px-1"
-              onChange={handleInput}
-              id="judul_mading"
-              value={dataInput.judul_mading}
-            />
+
+          <div className="form-input-mading m-5 px-5">
+            <div className="row">
+              <div className="col-2 d-flex justify-content-start">
+                <p className="text-mading-input">Judul Mading</p>
+              </div>
+              <div className="col d-flex justify-content-start">
+                <input
+                  type="text"
+                  className="input-input-mading px-1"
+                  onChange={handleInput}
+                  id="judul_mading"
+                  value={dataInput.judul_mading}
+                />
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-2 d-flex justify-content-start ">
+                <p className="text-mading-input">Isi Mading</p>
+              </div>
+              <div className="col d-flex justify-content-start">
+                <textarea
+                  type="text"
+                  className="input-isi-mading px-1"
+                  onChange={handleInput}
+                  id="isi_mading"
+                  value={dataInput.isi_mading}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-but-input-mading row">
+            <div className="col d-flex justify-content-end">
+              <button
+                className="but-input-admin btn btn-outline-danger"
+                onClick={handleBatal}
+              >
+                Batal
+              </button>
+            </div>
+            <div className="col d-flex justify-content-start">
+              <button
+                className="but-input-admin btn btn-primary"
+                onClick={handleSimpan}
+              >
+                Simpan Edit
+              </button>
+            </div>
           </div>
         </div>
-
-        <div className="row">
-          <div className="col-2 d-flex justify-content-start ">
-            <p className="text-mading-input">Isi Mading</p>
+        <div className="col">
+          <div className="judul-admin-sub">
+            <p className="text-judul-admin d-flex align-items-center justify-content-center">
+              Status Komentar
+            </p>
           </div>
-          <div className="col d-flex justify-content-start">
-            <textarea
-              type="text"
-              className="input-isi-mading px-1"
-              onChange={handleInput}
-              id="isi_mading"
-              value={dataInput.isi_mading}
-            />
-          </div>
-        </div>
-      </div>
 
-      <div className="bg-but-input-mading row">
-        <div className="col d-flex justify-content-end">
-          <button
-            className="but-input-admin btn btn-outline-danger"
-            onClick={handleBatal}
-          >
-            Batal
-          </button>
-        </div>
-        <div className="col d-flex justify-content-start">
-          <button
-            className="but-input-admin btn btn-primary"
-            onClick={handleSimpan}
-          >
-            Simpan Edit
-          </button>
+          <div className="row d-flex">
+            <div className="col-1 d-flex justify-content-start">
+              <input
+                type="radio"
+                name="status"
+                value="Mati"
+                id="status_komentar"
+                checked={dataInput.status_komentar === "Mati"}
+                onChange={handleInput}
+              />
+            </div>
+            <div className="col d-flex justify-content-start">
+              <label htmlFor="Mati">Mati</label>
+            </div>
+          </div>
+
+          <div className="row d-flex">
+            <div className="col-1 d-flex justify-content-start">
+              <input
+                type="radio"
+                name="status"
+                value="Hidup"
+                id="status_komentar"
+                checked={dataInput.status_komentar === "Hidup"}
+                onChange={handleInput}
+              />
+            </div>
+            <div className="col d-flex justify-content-start">
+              <label htmlFor="Hidup">Hidup</label>
+            </div>
+          </div>
         </div>
       </div>
     </div>

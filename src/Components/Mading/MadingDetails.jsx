@@ -57,7 +57,7 @@ const MadingDetails = () => {
     }));
     window.location.reload();
   };
-  console.log(dataKomentar);
+  console.log(dataMading);
   return (
     <div className="mading-details container">
       <p className="text-judul-mading-detail">{dataMading.judul_mading}</p>
@@ -104,38 +104,44 @@ const MadingDetails = () => {
             </div>
           </div>
 
-          <div className="bg-input-komentar d-flex justify-content-center">
-            <div className="row" style={{ width: "100%" }}>
-              <div className="col p-0">
-                <input
-                  type="text"
-                  id="email_komen"
-                  placeholder="Email..."
-                  className="input-username"
-                  onChange={handleInput}
-                />
-                <input
-                  type="text"
-                  id="nama_komen"
-                  placeholder="Username..."
-                  className="input-username"
-                  onChange={handleInput}
-                />
-                <input
-                  type="text"
-                  id="isi_komen"
-                  placeholder="Ketik Komentar..."
-                  className="input-komentar"
-                  onChange={handleInput}
-                />
-              </div>
-              <div className="col-2 p-0 ">
-                <button className="but-komentar" onClick={handleKirim}>
-                  Kirim
-                </button>
+          {dataMading.status_komentar === "Hidup" ? (
+            <div className="bg-input-komentar d-flex justify-content-center">
+              <div className="row" style={{ width: "100%" }}>
+                <div className="col p-0">
+                  <input
+                    type="text"
+                    id="email_komen"
+                    placeholder="Email..."
+                    className="input-username"
+                    onChange={handleInput}
+                  />
+                  <input
+                    type="text"
+                    id="nama_komen"
+                    placeholder="Username..."
+                    className="input-username"
+                    onChange={handleInput}
+                  />
+                  <input
+                    type="text"
+                    id="isi_komen"
+                    placeholder="Ketik Komentar..."
+                    className="input-komentar"
+                    onChange={handleInput}
+                  />
+                </div>
+                <div className="col-2 p-0 ">
+                  <button className="but-komentar" onClick={handleKirim}>
+                    Kirim
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
+          ) : (
+            <div>
+              <p>komentar dimatikan</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

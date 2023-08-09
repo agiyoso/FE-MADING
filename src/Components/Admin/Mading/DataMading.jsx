@@ -45,6 +45,7 @@ const DataMading = ({ setHalaman }) => {
             <th className="col-1">No</th>
             <th className="col-3">Judul</th>
             <th className="col">Isi</th>
+            <th className="col">Komentar</th>
             <th className="col-2">~</th>
           </tr>
         </thead>
@@ -55,6 +56,7 @@ const DataMading = ({ setHalaman }) => {
                 <td>{index + 1}</td>
                 <td>{data.judul_mading}</td>
                 <td>{data.isi_mading}</td>
+                <td>{data.status_komentar}</td>
                 <td>
                   <button
                     className="but-mading btn btn-warning mx-1"
